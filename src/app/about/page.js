@@ -23,7 +23,7 @@ export default function AboutPage() {
             Meet Erica
           </h1>
           <p className="text-xl md:text-3xl text-white/90 max-w-2xl font-light italic">
-            "Capturing the soul of modern architecture through the lens of a traveler."
+            &quot;Capturing the soul of modern architecture through the lens of a traveler.&quot;
           </p>
         </div>
       </section>

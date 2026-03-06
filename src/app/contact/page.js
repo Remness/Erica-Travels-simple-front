@@ -50,7 +50,7 @@ export default function ContactPage() {
               <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100">
                 <h3 className="font-bold text-gray-900 mb-2">Collabs & Inquiries</h3>
                 <p className="text-gray-600">
-                  For brand partnerships, media kits, or speaking engagements, please mention "Partnership" in your email subject.
+                  For brand partnerships, media kits, or speaking engagements, please mention &quot;Partnership&quot; in your email subject.
                 </p>
               </div>
             </div>
