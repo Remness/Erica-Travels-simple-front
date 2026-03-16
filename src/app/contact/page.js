@@ -61,11 +61,11 @@ export default function ContactPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-gray-700 uppercase tracking-wider">Your Name</label>
-                    <Input placeholder="John Doe" className="h-12 bg-gray-50 border-transparent focus:bg-white focus:border-teal-600 transition-all" />
+                    <Input placeholder=" " className="h-12 bg-gray-50 border-transparent focus:bg-white focus:border-teal-600 transition-all" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-gray-700 uppercase tracking-wider">Email Address</label>
-                    <Input placeholder="john@example.com" type="email" className="h-12 bg-gray-50 border-transparent focus:bg-white focus:border-teal-600 transition-all" />
+                    <Input placeholder="" type="email" className="h-12 bg-gray-50 border-transparent focus:bg-white focus:border-teal-600 transition-all" />
                   </div>
                 </div>
                 <div className="space-y-2">
