@@ -23,7 +23,7 @@ export default function Footer() {
     <footer className="bg-[#111111] text-gray-400 relative overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-6 md:px-20 py-24 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-24">
-          
+
           {/* 1. Logo & Socials */}
           <div className="space-y-10">
             <Link href="/" className="inline-block">
