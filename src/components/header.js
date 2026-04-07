@@ -27,8 +27,8 @@ export default function Header() {
       <div className="flex h-24 items-center justify-between px-6 md:px-20 container mx-auto">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
-          <span className={`text-3xl font-black tracking-tighter ${isHome ? "text-white" : "text-black"}`}>
-            Erica<span className="text-orange-500">.</span>
+          <span className={`text-3xl font-black tracking-tighter ${isHome ? "text-black" : "text-black"}`}>
+            Erica
           </span>
         </Link>
 
@@ -38,7 +38,7 @@ export default function Header() {
             <Link
               key={route.path}
               href={route.path}
-              className={`text-[16px] font-bold transition-all hover:text-orange-500 ${isHome ? "text-white/90" : "text-black/80"}`}
+              className={`text-[16px] font-bold transition-all hover:text-orange-500 ${isHome ? "text-black/80" : "text-black/80"}`}
             >
               {route.name}
             </Link>
@@ -48,15 +48,15 @@ export default function Header() {
         {/* Right Section: Search & Contact */}
         <div className="hidden md:flex items-center gap-6">
           <div className="relative group">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-orange-400 group-hover:text-orange-500 transition-colors" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 group-hover:text-orange-500 transition-colors" />
             <input
               type="text"
               placeholder="Search"
-              className="pl-10 pr-4 py-3 rounded-full border-none shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm w-48 transition-all"
+              className="pl-10 pr-4 py-3 rounded-full bg-gray-100/50 border-none shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm w-48 transition-all"
             />
           </div>
           <Link href="/contact" className="ml-2">
-            <Button className="bg-[#ff5722] hover:bg-[#e64a19] text-white rounded-full px-8 py-6 text-[15px] font-bold shadow-lg transition-transform hover:scale-105">
+            <Button className="bg-[#3b5bdb] hover:bg-[#324ab2] text-white rounded-full px-8 py-6 text-[15px] font-bold shadow-lg transition-transform hover:scale-105">
               Contact Us
             </Button>
           </Link>
