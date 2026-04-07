@@ -1,90 +1,112 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Camera, Map, Globe, Heart, Compass, Star } from "lucide-react";
+import { Mail, Instagram, Youtube, Twitter, Send, MapPin, Compass, Globe, MessageSquare, Phone, Map, Paperclip } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-white font-sans">
+    <div className="flex flex-col min-h-screen bg-[#fff9f5] font-sans text-gray-900">
+      {/* Header Space */}
+      <div className="h-24"></div>
+
       {/* Hero Section */}
-      <section className="relative h-[60vh] w-full flex items-center justify-center overflow-hidden">
-        <Image src="/qatar-scenic.png" alt="About Hero" fill className="object-cover" />
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
-        <div className="relative z-10 text-center text-white px-6">
-          <h4 className="text-orange-500 font-bold uppercase tracking-[0.3em] text-sm mb-4">The Journey</h4>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4 italic">Capturing Qatar's Soul</h1>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed italic">
-            Discover the visionary archive dedicated to the architectural wonders and cultural heritage of Qatar.
-          </p>
-        </div>
-      </section>
-
-      <section className="container mx-auto px-6 md:px-20 py-24 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-        <div className="relative group">
-          <div className="relative z-10 rounded-[60px] border-[10px] border-gray-50 overflow-hidden aspect-[3/4] shadow-2xl skew-y-3 group-hover:skew-y-0 transition-transform duration-1000">
-             <Image src="/al-bayt.png" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" alt="Qatari Architecture" />
-             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-          </div>
-          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#111] rounded-[40px] -z-10 flex items-center justify-center text-orange-500 shadow-2xl rotate-12 group-hover:rotate-0 transition-transform duration-1000">
-            <Compass size={80} />
-          </div>
-          <div className="absolute -top-10 -left-10 w-32 h-32 bg-orange-500 rounded-full -z-10 blur-3xl opacity-20"></div>
-        </div>
-
-        <div className="space-y-12">
-          <div className="space-y-6">
-            <h2 className="text-5xl md:text-7xl font-black text-gray-900 italic leading-none tracking-tighter">
-              The Architecture<br/>of <span className="text-orange-500">Passion.</span>
-            </h2>
-            <p className="text-2xl text-gray-400 font-bold italic">Erica Travels: A Visionary Archive.</p>
-          </div>
-          <div className="space-y-8 text-xl text-gray-500 leading-relaxed font-medium">
-            <p>
-              Erica Travels was born from a fascination with the impossible. Not just the sport, but the monumental structures that rose from the sands of Qatar to redefine modern engineering.
-            </p>
-            <div className="p-10 bg-black text-white rounded-[50px] relative overflow-hidden group">
-               <p className="relative z-10 italic text-2xl font-black leading-tight">
-                 "This platform celebrates the interplay between futuristic design and ancient nomadic heritage."
-               </p>
-               <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-bl-full"></div>
+      <section className="relative h-[60vh] w-full flex items-center justify-center overflow-hidden bg-gradient-to-r from-[#e0f2f1] to-[#fff9f5]">
+        <div className="relative z-10 text-center px-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md rounded-full border border-orange-100 mb-8 animate-fade-in shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+              <span className="text-orange-600 font-bold text-xs uppercase tracking-wider">Say Hello</span>
             </div>
-            <p>
-              This isn't just a travel site; it's a digital gallery dedicated to the curves of Al Janoub, the grandeur of Lusail, and the cultural tapestry woven into every brick and beam of Doha.
-            </p>
-          </div>
-          <div className="pt-10 flex gap-12 border-t border-gray-100">
-            <div className="space-y-2">
-              <p className="text-5xl font-black text-black">8+</p>
-              <p className="text-[10px] font-black text-orange-500 uppercase tracking-[0.3em]">Landmarks</p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-5xl font-black text-black">20K</p>
-              <p className="text-[10px] font-black text-orange-500 uppercase tracking-[0.3em]">Masterpieces</p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-5xl font-black text-black">15</p>
-              <p className="text-[10px] font-black text-orange-500 uppercase tracking-[0.3em]">Exhibitions</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy Section */}
-      <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-6 md:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { icon: Map, title: "Detailed Guides", desc: "Step-by-step instructions on how to reach each stadium and nearby spots." },
-              { icon: Heart, title: "Cultural Insights", desc: "Understanding the soul and heritage behind the steel." },
-              { icon: Star, title: "Vlogs & Media", desc: "Walk with me through the gates and experience the atmosphere." }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-12 rounded-[40px] shadow-xl shadow-gray-200/50 space-y-6 hover:-translate-y-4 transition-all group">
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-gray-400 group-hover:bg-orange-500 group-hover:text-white transition-all">
-                  <item.icon size={32} />
+            <div className="relative mb-8">
+                <h1 className="text-6xl md:text-8xl font-black tracking-tight text-[#1a1a1a] leading-none">
+                    Get in touch
+                </h1>
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-48 h-2">
+                    <svg viewBox="0 0 100 10" className="w-full text-[#00a896] fill-none stroke-current stroke-3">
+                        <path d="M0,5 Q25,0 50,5 T100,5" />
+                    </svg>
                 </div>
-                <h3 className="text-2xl font-black italic">{item.title}</h3>
-                <p className="text-gray-500 font-medium leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+            </div>
+            <p className="text-gray-500 text-lg md:text-xl max-w-xl mx-auto font-medium leading-relaxed">
+                Have a question about my stadium guides? Want to collaborate or just say hi? I'd love to hear from you.
+            </p>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-6 md:px-20 py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+          
+          {/* Left: Connect Info */}
+          <div className="space-y-16">
+            <div className="space-y-8">
+              <h2 className="text-4xl md:text-5xl font-black text-[#1a1a1a] tracking-tight">Connect with Erica</h2>
+              <p className="text-gray-500 text-lg font-medium leading-relaxed">
+                While I'm often on the road (or walking incredible stadium concourses), I do my best to respond to every message from fellow travelers.
+              </p>
+            </div>
+
+            {/* Email Card */}
+            <div className="p-8 bg-white rounded-3xl border border-gray-50 shadow-sm flex items-center gap-6 group hover:shadow-xl transition-all duration-300">
+                <div className="w-20 h-20 bg-[#fff4f0] rounded-2xl flex items-center justify-center text-orange-500">
+                    <Mail size={32} />
+                </div>
+                <div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-1">EMAIL ME</p>
+                    <h4 className="text-2xl font-black text-[#1a1a1a]">hi@ericatravels.com</h4>
+                </div>
+            </div>
+
+            {/* Social Grid */}
+            <div className="space-y-8">
+                <h3 className="text-xl font-black text-[#1a1a1a]">Social Channels</h3>
+                <div className="grid grid-cols-2 gap-6">
+                    {[
+                        { icon: Instagram, name: "Instagram", handle: "@ericatravels", color: "text-pink-500" },
+                        { icon: Youtube, name: "YouTube", handle: "Erica's Tours", color: "text-red-500" },
+                        { icon: Twitter, name: "Twitter", handle: "@ericatours", color: "text-blue-400" },
+                        { icon: MapPin, name: "Pinterest", handle: "Qatar Inspo", color: "text-red-600" }
+                    ].map((social, i) => (
+                        <div key={i} className="p-6 bg-white rounded-3xl border border-gray-50 shadow-sm hover:shadow-lg transition-all group text-center space-y-4">
+                            <div className={`w-12 h-12 ${social.color} mx-auto flex items-center justify-center`}>
+                                <social.icon size={32} />
+                            </div>
+                            <div>
+                                <h4 className="text-sm font-black text-[#1a1a1a]">{social.name}</h4>
+                                <p className="text-[10px] font-bold text-gray-400">{social.handle}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+          </div>
+
+          {/* Right: Form */}
+          <div className="bg-white rounded-[4rem] shadow-2xl p-10 md:p-16 border border-gray-50 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-[#fff4f0] rounded-bl-full opacity-50"></div>
+            <form className="space-y-8 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-3">
+                        <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">YOUR NAME</label>
+                        <Input className="h-16 rounded-2xl bg-[#fcfcfc] border-gray-100 border focus-visible:ring-[#3b5bdb] font-bold" />
+                    </div>
+                    <div className="space-y-3">
+                        <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">EMAIL ADDRESS</label>
+                        <Input type="email" className="h-16 rounded-2xl bg-[#fcfcfc] border-gray-100 border focus-visible:ring-[#3b5bdb] font-bold" />
+                    </div>
+                </div>
+                <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">SUBJECT</label>
+                    <Input className="h-16 rounded-2xl bg-[#fcfcfc] border-gray-100 border focus-visible:ring-[#3b5bdb] font-bold" />
+                </div>
+                <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-gray-400">MESSAGE</label>
+                    <Textarea className="min-h-[150px] rounded-2xl bg-[#fcfcfc] border-gray-100 border focus-visible:ring-[#3b5bdb] font-bold p-6 resize-none" />
+                </div>
+                <Button className="w-full h-20 bg-[#3b5bdb] hover:bg-[#324ab2] text-white rounded-2xl text-lg font-black flex items-center justify-center gap-4 transition-all shadow-xl shadow-blue-500/20">
+                    <Send size={24} className="-rotate-45" /> Send Message
+                </Button>
+            </form>
           </div>
         </div>
       </section>
